@@ -1,0 +1,34 @@
+<h1 class="text-3xl font-bold mb-4">About</h1>
+
+<p>Welcome to the NBA Management Application. This application allows users to manage and view information about NBA teams, players, their statistics, and classifications.</p>
+
+<h2 class="text-2xl font-bold mt-4">Features</h2>
+<ul class="list-disc list-inside ml-4">
+  <li>View a list of all NBA teams and their details.</li>
+  <li>View a list of all players and their respective teams.</li>
+  <li>Access detailed statistics for each team’s players.</li>
+  <li>View the classification (wins and losses) for each team.</li>
+</ul>
+
+<h2 class="text-2xl font-bold mt-4">Database Relationships</h2>
+<p>The application uses a relational database with the following models and relationships:</p>
+
+<h3 class="text-xl font-bold mt-2">Team</h3>
+<p>A Team has many Players and one Classification. Teams can be associated with multiple games through their players.</p>
+
+<h3 class="text-xl font-bold mt-2">Player</h3>
+<p>A Player belongs to a Team and has many Statistics. Players can participate in multiple games through the GamePlayer join table.</p>
+
+<h3 class="text-xl font-bold mt-2">Statistic</h3>
+<p>Statistics are associated with a Player and include data such as points, rebounds, and assists.</p>
+
+<h3 class="text-xl font-bold mt-2">Classification</h3>
+<p>A Classification belongs to a Team and includes the number of wins and losses for the team.</p>
+
+<h3 class="text-xl font-bold mt-2">Game</h3>
+<p>A Game has many players through the GamePlayer join table and includes information about the game´s date and location.</p>
+
+<h3 class="text-xl font-bold mt-2">GamePlayer</h3>
+<p>GamePlayer is a join table that connects Players to Games, allowing for a many-to-many relationship between Players and Games.</p>
+
+<p class="mt-4">We hope you find this application useful for managing and viewing NBA-related data.</p>

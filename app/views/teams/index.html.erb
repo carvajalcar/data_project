@@ -1,0 +1,24 @@
+<h1 class="text-3xl font-bold mb-4">Teams</h1>
+
+<div class="overflow-x-auto">
+  <table class="min-w-full w-full bg-white border-gray-200 shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">City</th>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Statistics</th>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Classification</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <% @teams.each do |team| %>
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap"><%= link_to team.name, team_path(team), class: "text-blue-500 hover:underline" %></td>
+          <td class="px-6 py-4 whitespace-nowrap"><%= team.city %></td>
+          <td class="px-6 py-4 whitespace-nowrap"><%= link_to "Statistics", statistics_team_path(team), class: "text-blue-500 hover:underline" %></td>
+          <td class="px-6 py-4 whitespace-nowrap"><%= link_to "Classification", classification_team_path(team), class: "text-blue-500 hover:underline" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
